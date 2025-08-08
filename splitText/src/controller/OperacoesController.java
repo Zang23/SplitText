@@ -8,13 +8,12 @@ public class OperacoesController {
 		super();
 	}
 	
-	public String recebeTexto() {
-		Scanner dadosTexto = new Scanner(System.in);
+	public String recebeTexto(Scanner dados) {
 		
 		System.out.println("Insira um texto");
-		String texto = dadosTexto.nextLine();
-		
+		String texto = dados.nextLine();
 		return texto;
+		
 	}
 	
 	public int contaPalavras(String texto) {

@@ -15,10 +15,11 @@ public class Principal {
 		while(opc != 9) {
 			System.out.println("1- NOVO TEXTO\n9- SAIR");
 			opc = dados.nextInt();
+			dados.nextLine();
 			
 			switch(opc) {
 				case 1:
-					String texto = op.recebeTexto();
+					String texto = op.recebeTexto(dados);
 					int nPalavras = op.contaPalavras(texto);
 					System.out.println("O numero de palavras é: " + nPalavras);
 					break;
@@ -27,9 +28,9 @@ public class Principal {
 					break;
 				default:
 					System.out.println("Digite uma opção válida");
-					break;
 			}
 		}
+		dados.close();
 	}
 	
 	
